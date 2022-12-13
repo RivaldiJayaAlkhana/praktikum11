@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Picker</title>
+    <style>
+        body{
+            background-image: url(images/bg3.png);
+            background-size: 100%;
+        }
+         h1 {
+            text-align: center;
+        }
+
+        a {
+            text-decoration: none;
+            color: black;
+        }
+        .container {
+            display: flex;
+            width: 500px;
+            height: 300px;
+            margin: 50px 400px;
+        }
+
+        .box {
+            display: flex;
+            justify-content: center;
+            width: 500px;
+            height: 300px;
+        }
+    </style>
+    <script>
+        function image_picker(){
+            let pilihan = document.getElementById("option");
+            const list_image = ["aamon.png", "bane.png", "chou.png", "fanny.png", "julian.png", "ling.png"];
+
+            if(pilihan.value == "aamon"){
+                let select = list_image[0];
+                document.getElementById("gambar").src = `images/${select}`
+            }
+
+            if(pilihan.value == "bane"){
+                let select = list_image[1];
+                document.getElementById("gambar").src = `images/${select}`
+            }
+
+            if(pilihan.value == "chou"){
+                let select = list_image[2];
+                document.getElementById("gambar").src = `images/${select}`
+            }
+
+            if(pilihan.value == "fanny"){
+                let select = list_image[3];
+                document.getElementById("gambar").src = `images/${select}`
+            }
+
+            if(pilihan.value == "julian"){
+                let select = list_image[4];
+                document.getElementById("gambar").src = `images/${select}`
+            }
+
+            if(pilihan.value == "ling"){
+                let select = list_image[5];
+                document.getElementById("gambar").src = `images/${select}`
+            }
+        }
+
+        function acc1() {
+            dekor_1 = document.getElementById("home");
+            dekor_1.style.color = "aqua";
+        }
+
+        function acc2() {
+            dekor_2 = document.getElementById("home");
+            dekor_2.style.color = "black";
+        }        
+
+    </script>
+</head>
+<body>
+    <a href="" onmouseover="acc1()" onmouseout="acc2()" id="home"><h1>Image Picker Hero Mobile Legend</h1></a>
+    <hr>
+    <br>
+    <select name="" id="option" onchange="image_picker()">
+    <option value="">Pilih Hero Favoritmu</option>
+    <option value="aamon">Aamon</option>
+    <option value="bane">Bane</option>
+    <option value="chou">Chou</option>
+    <option value="fanny">Fanny</option>
+    <option value="julian">Julian</option>
+    <option value="ling">Ling</option>
+</select>
+
+<div class="container">
+    <div class="box">
+        <img id="gambar">
+    </div>
+</div>    
+</body>
+</html>
